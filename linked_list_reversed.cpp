@@ -1,5 +1,3 @@
-#include <iostream>
-#include <stdlib.h>
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -11,16 +9,12 @@ struct Node {
 struct Node* head;
 
 void createNodeList(int n);
-void displayList();
 void displayListReverse(struct Node* node);
 
 int main() {
     int n;
     cin >> n;
     createNodeList(n);
-    cout << "Original List:" << endl;
-    displayList();
-    cout << "Reversed List:" << endl;
     displayListReverse(head);
     return 0;
 }
@@ -50,19 +44,6 @@ void createNodeList(int n) {
                 tmp->next = fnNode;
                 tmp = tmp->next;
             }
-        }
-    }
-}
-
-void displayList() {
-    struct Node* tmp;
-    if (head == NULL) {
-        cout << "List is empty." << endl;
-    } else {
-        tmp = head;
-        while (tmp != NULL) {
-            cout << tmp->num << endl;
-            tmp = tmp->next;
         }
     }
 }

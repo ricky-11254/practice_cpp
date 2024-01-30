@@ -1,23 +1,19 @@
-#include <iostream>
-#include <stdlib.h>
 #include <bits/stdc++.h>
 using namespace std;
 
 struct Node {
-    int num;
+    int num;          
     struct Node* next;
+};
 
 struct Node* head;
 
 void createNodeList(int n);
 void displayList();
-
 int main() {
     int n;
-    cout << "Number of nodes: ";
     cin >> n;
     createNodeList(n);
-    cout<"Data entered: ";
     displayList();
     return 0;
 }
@@ -29,26 +25,20 @@ void createNodeList(int n) {
     head = new Node;
 
     if (head == NULL) {
-        cout << "Memory cannot be allocated." << endl;
+       cout << "Memory cannot be allocated";
     } else {
-        cout << "Input data for node 1: ";
         cin >> num;
         head->num = num;
         head->next = NULL;
         tmp = head;
-
         for (i = 2; i <= n; i++) {
             fnNode = new Node;
             if (fnNode == NULL) {
-                cout << "Memory cannot be allocated." << endl;
                 break;
             } else {
-                cout << "Input data for node " << i << ": ";
                 cin >> num;
-
                 fnNode->num = num;
                 fnNode->next = NULL;
-
                 tmp->next = fnNode;
                 tmp = tmp->next;
             }
@@ -63,9 +53,8 @@ void displayList() {
     } else {
         tmp = head;
         while (tmp != NULL) {
-            cout<<"Data: "<<tmp->num<<endl;
-			tmp = tmp->next;
+            cout << tmp->num << endl;
+            tmp = tmp->next;
         }
     }
 }
-
