@@ -1,6 +1,13 @@
-#include <iostream>
+#include <bits/stdc++.h>
+
 using namespace std;
-int main(){
+
+void MyFirstCode();
+
+void MyFirstCode(){
 	cout<<"Hello World!";
+}
+int main(){
+	MyFirstCode();
 	return 0;
 }
